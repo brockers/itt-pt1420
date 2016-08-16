@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>99 Bottles of Beer Printed</title>
+		<script>
+			// This is my totally awesome function
+			function printWords(){
+			
+				var bottles = document.getElementById("beerCount").value;
+				document.getElementById("msg").innerHTML = "";
+			
+				while(bottles>0){
+					var message = bottles +" bottles of beer the wall <br>";
+					message += bottles +" bottles of beer<br>";
+					message += "You take one down, and pass it around<br>";
+					
+					bottles--;
+					
+					message += bottles + " bottles of beer on the wall<br><br>";
+					
+					document.getElementById("msg").innerHTML += message;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="printWords();" name="clickme">Print Lyrics</button>
+		<input type="text" id="beerCount" value="99"></input>
+		<div id="msg">...<br></div>
+	</body>
+</html>

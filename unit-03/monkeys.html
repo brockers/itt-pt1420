@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>No more monkeys</title>
+		<script>
+			// This is my totally awesome function
+			function printWords(){
+			
+				var monkeys = 5;
+				document.getElementById("msg").innerHTML = "";
+			
+				while(monkeys>0){
+					var message = monkeys +" little monkeys jumping on the bed<br>";
+					message += "One fell off and bumped his head<br>";
+					message += "Mama called the doctor and the doctor said<br>";
+					message += "No more monkeys jumping on the bed.<br><br>";
+					
+					monkeys--;
+					
+					document.getElementById("msg").innerHTML += message;
+				}
+				
+				document.getElementById("msg").innerHTML += "1 little mommy jumping on her bed...";
+			}
+			
+			function changeColor(color,bgcolor){
+				if(bgcolor=='orange'){
+					alert("You know your picking the color of evil and loosers??!?")
+				} 
+				document.getElementById("msg").style.color = color;
+				document.getElementById("msg").style.backgroundColor = bgcolor;
+			}
+			
+			var currentColor = 0;
+			
+			function rotateColor(){
+				var colors = ["black","red","orange","yellow","green","blue","purple"];
+				currentColor++;
+				if(currentColor > 6){currentColor=0;}
+				changeColor(colors[currentColor],"white");
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="printWords();" name="clickme">Print Lyrics</button>
+		<button onclick="rotateColor();" name="clickme">Rotate Color</button>
+		<button onclick="changeColor('black','white');" name="clickme">Reset</button>
+		<button onclick="changeColor('red','white');" name="clickme">Red</button>
+		<button onclick="changeColor('blue','orange');" name="clickme">Blue</button>
+		<button onclick="changeColor('green','yellow');" name="clickme">Green</button>
+		<button onclick="changeColor('orange','black');" name="clickme">The Color of the Devil... and loosers</button>
+		<div id="msg">...<br></div>
+	</body>
+</html>

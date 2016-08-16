@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>My Hello World Site</title>
+		<script>
+			var howmany = 1;
+			// This is my totally awesome function
+			function alertMe(){
+				var message = "Hello world " + howmany + "<br>";
+				// alert( message );
+				document.getElementById("msg").innerHTML += message;
+				howmany++;
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="alertMe();" name="clickme">Don't Press</button>
+		<h1 id="msg">This is my h1 tag message</h1>
+	</body>
+</html>
