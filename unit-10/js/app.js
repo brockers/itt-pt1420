@@ -7,11 +7,9 @@ var downArrow = 40;
 
 function movePaddle(e){
 	if( e.keyCode === upArrow) {
-		if(paddle.posy <= 0){ paddle.posy = 0; }
-		 else { paddle.posy -= (window.innerHeight / 10); }
+		paddle.posy -= (window.innerHeight / 10);
 	} else if (e.keyCode === downArrow){
-			if((paddle.posy + paddle.y) >= window.innerHeight	) { paddle.posy = (window.innerHeight - paddle.y); }
-			else { paddle.posy += (window.innerHeight / 10); }
+		paddle.posy += (window.innerHeight / 10);
 	}
 }
 
